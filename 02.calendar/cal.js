@@ -12,11 +12,10 @@ console.log("Su Mo Tu We Th Fr Sa");
 
 const start = target_ym.startOf("month");
 const end = target_ym.endOf("month");
-const spaceLeftPadding = (val) => ("  " + val).slice(-2);
 
 for (let day = start; day <= end; ) {
   let dayOfWeek = day.format("d");
-  let outputDay = spaceLeftPadding(day.format("D"));
+  let outputDay = day.format("D").padStart(2, " ");
   if (day === start) {
     process.stdout.write(" ".repeat(3 * Number(dayOfWeek)));
   }
