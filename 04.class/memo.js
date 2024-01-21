@@ -76,9 +76,6 @@ class Memo extends Db {
   insertIntoDb() {
     this.insertIntoTable(this.content);
   }
-  getAllMemosFromDb() {
-    this.getAllRecords();
-  }
 }
 
 async function executeMemoCli() {
